@@ -6,8 +6,8 @@ import shutil
 IMAGES_PER_CLASS = 10000
 
 
-ds1_path = '/media/jcneves/DATASETS/CELEBA_align_mtcnn/'
-ds2_path = '/media/jcneves/DATASETS/CASIA-WebFace_align_mtcnn/'
+ds1_path = '/media/jcneves/DATASETS/VGG_FACE_2/byid_alignedmtcnn_test/'
+ds2_path = '/media/jcneves/DATASETS/CASIA-WebFace/byid_alignedmtcnn/'
 out_path = '/media/jcneves/DATASETS/real2real/'
 
 ds1_files = [f for f in glob.glob(ds1_path + "**/*.png", recursive=True)]

@@ -61,7 +61,7 @@ data/
       - class_n folder/
 """
 
-data_dir = "/media/jcneves/DATASETS/real2real/"
+data_dir = "/media/jcneves/DATASETS/real2real_standard/"
 input_shape = 200
 batch_size = 32
 mean = [0.5, 0.5, 0.5]

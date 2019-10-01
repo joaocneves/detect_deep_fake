@@ -9,9 +9,9 @@ from sklearn.model_selection import train_test_split
 IMAGES_PER_CLASS = 10000
 subsets = ['train', 'val', 'test']
 
-ds1_path = '/media/jcneves/DATASETS/vggface_crop/'
-ds2_path = '/media/jcneves/DATASETS/CASIA-WebFace_align_mtcnn/'
-out_path = '/media/jcneves/DATASETS/real2real/'
+ds1_path = '/media/jcneves/DATASETS/VGG_FACE_2/byid_alignedlib_train/'
+ds2_path = '/media/jcneves/DATASETS/CASIA-WebFace/byid_alignedlib/'
+out_path = '/media/jcneves/DATASETS/real2real_standard/'
 
 ds1_files = [f for f in glob.glob(ds1_path + "*", recursive=True)]
 ds2_files = [f for f in glob.glob(ds2_path + "*", recursive=True)]
@@ -85,11 +85,11 @@ for s in subsets:
     for i in range(len(ds2_files_subsets[s])):
 
         id_path = ds2_files_subsets[s][i]
-        img_files = [f for f in glob.glob(id_path + "/*.png")]
+        img_files = [f for f in glob.glob(id_path + "/*.jpg")]
         img_files = img_files[:imgs_per_id]
 
         for f in img_files:
 
-            img_name = 'img_{:06d}.png'.format(idx)
+            img_name = 'img_{:06d}.jpg'.format(idx)
             shutil.copyfile(f, out_path + s + '/1/' + img_name)
             idx = idx + 1
