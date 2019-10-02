@@ -1,0 +1,55 @@
+This repo contains the code for exploring methods capable of identifying fake facial images generate by GANs.
+
+Experiments done:
+
+1) Train a CNN for distinguish between real and fake images.
+1.1) Use a public dataset containing facial imagery as the source of real images.  
+1.2) Use the website thispersondoesnotexist.com as the source of fake images.
+
+RESULTS:
+
+I used all the original images of LFW (13K) as real images and the same amount of fake images.
+The network obtnained an acc of 0.99.
+
+I used a subset of original images in the CASIA-Webface as real images and the same amount of fake images.
+The network obtnained an acc of 0.99.
+
+With these results, I thought that this experiment was unfair, because the real images were not aligned, and the fake ones seem to have an implicit alignment
+For this reason, I used this code "https://github.com/davidsandberg/facenet/tree/master/src/align" to align all the images.
+
+However, the results were very similar.
+Nevertheless, I was not confident that the network was really learning the difference between real and fake data, or if was learning some attributes in the dataset.
+For this reason, I though of train the same network for distinguish between a real dataset and another real dataset. In this experiment, I expect and acc of 0.5.
+
+2) Train a CNN for distinguish between real images from a public dataset and real images another public dataset.
+2.1) Use a public dataset containing facial imagery as the source of real images.
+2.2) Use another public dataset containing facial imagery as the source of real images.
+2.3) Align both datasets using the same strategy.
+
+RESULTS:
+
+I used CASIA-Webface dataset 1 and CELEBA as dataset 2, and all the images were aligned. 
+The network obtained an acc of 0.98.
+
+This result is very strange. It sugests that each dataset has unique attributes that allow the network to distinguish the images from these datasets.
+One covariate that may cause this result was the train/test split strategy. I did not care about the identity when dividing the images. 
+And it is likely that the identities seen in the training may exist in the test inside of the same class, allowing the network to correctly classify the test images based on the identities learned.
+In order to avoid this, I have repeated the experiments by ensuring that id(train) ∩ id(val) ∩ id(test) = {}.
+
+The results were similar. 
+
+After observing these results I suspected that maybe the background can be a source of bias that identifies the dataset.
+For this reason, I created my own alignment code, and generated face images with reduced amount of background.
+
+With this change the accuracy decreased to 0.89. Nevertheless, there is still covariates that allow the network to distinguish between the two datasets. 
+
+
+Experiments planned:
+
+Experiments done:
+
+1) Train a CNN for distinguish between real and fake images.
+1.1) Use a CASIA-Webface as training data and VGG-FACE2 as test data for real images.  
+1.2) Use the StyleGan as training data and the images from another GAN as test data for fake images.
+1.3) With this experiment we aim at evaluating if the CNN can generalize in different datasets. 
+

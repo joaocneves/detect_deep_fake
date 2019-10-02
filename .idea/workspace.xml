@@ -3,9 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="ea0b9dbc-39bb-4051-ad48-5699f70879d1" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/code.py" beforeDir="false" afterPath="$PROJECT_DIR$/code" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/create_real_to_real_dataset.py" beforeDir="false" afterPath="$PROJECT_DIR$/create_real_to_real_dataset.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/create_real_to_real_dataset_standard.py" beforeDir="false" afterPath="$PROJECT_DIR$/create_real_to_real_dataset_standard.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
