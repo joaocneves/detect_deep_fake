@@ -2,7 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ea0b9dbc-39bb-4051-ad48-5699f70879d1" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/align_face_byimg.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/create_real_to_fake_dataset.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/create_real_to_fake_dataset2.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/create_real_to_fake_dataset_mixed.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/align_face.py" beforeDir="false" afterPath="$PROJECT_DIR$/align_face.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/code.py" beforeDir="false" afterPath="$PROJECT_DIR$/code" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/create_real_to_real_dataset_standard.py" beforeDir="false" afterPath="$PROJECT_DIR$/create_real_to_real_dataset_standard.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -38,7 +45,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.create_real_to_real_dataset_standard">
+  <component name="RunManager" selected="Python.create_real_to_fake_dataset_mixed">
     <configuration name="align_face" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="detect_deep_fake" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -60,7 +67,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="code" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="align_face_byimg" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="detect_deep_fake" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -72,7 +79,7 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/code" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/align_face_byimg.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -81,7 +88,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="create_real_to_real_dataset" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="create_real_to_fake_dataset" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="detect_deep_fake" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -93,7 +100,7 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/create_real_to_real_dataset.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/create_real_to_fake_dataset.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -102,7 +109,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="create_real_to_real_dataset_standard" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="create_real_to_fake_dataset2" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="detect_deep_fake" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -114,7 +121,7 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/create_real_to_real_dataset_standard.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/create_real_to_fake_dataset2.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -123,7 +130,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="create_train_test_folder_from_dataset" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="create_real_to_fake_dataset_mixed" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="detect_deep_fake" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -135,7 +142,7 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/create_train_test_folder_from_dataset.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/create_real_to_fake_dataset_mixed.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -146,11 +153,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.create_real_to_real_dataset_standard" />
+        <item itemvalue="Python.create_real_to_fake_dataset_mixed" />
+        <item itemvalue="Python.create_real_to_fake_dataset2" />
         <item itemvalue="Python.align_face" />
-        <item itemvalue="Python.code" />
-        <item itemvalue="Python.create_real_to_real_dataset" />
-        <item itemvalue="Python.create_train_test_folder_from_dataset" />
+        <item itemvalue="Python.create_real_to_fake_dataset" />
+        <item itemvalue="Python.align_face_byimg" />
       </list>
     </recent_temporary>
   </component>
@@ -205,11 +212,6 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/code</url>
-          <line>64</line>
-          <option name="timeStamp" value="14" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/code</url>
           <line>16</line>
           <option name="timeStamp" value="15" />
         </line-breakpoint>
@@ -228,29 +230,44 @@
           <option name="timeStamp" value="19" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/create_real_to_real_dataset_standard.py</url>
-          <line>84</line>
-          <option name="timeStamp" value="26" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/create_real_to_real_dataset_standard.py</url>
-          <line>87</line>
-          <option name="timeStamp" value="27" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/align_face.py</url>
-          <line>50</line>
+          <line>51</line>
           <option name="timeStamp" value="28" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/align_face.py</url>
-          <line>34</line>
+          <line>35</line>
           <option name="timeStamp" value="29" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/create_real_to_real_dataset_standard.py</url>
+          <line>47</line>
+          <option name="timeStamp" value="32" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/create_real_to_real_dataset_standard.py</url>
+          <line>86</line>
+          <option name="timeStamp" value="34" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/create_real_to_real_dataset_standard.py</url>
+          <line>23</line>
+          <option name="timeStamp" value="36" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/create_real_to_fake_dataset.py</url>
+          <line>97</line>
+          <option name="timeStamp" value="46" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/align_face.py</url>
-          <line>31</line>
-          <option name="timeStamp" value="30" />
+          <line>33</line>
+          <option name="timeStamp" value="47" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/train.py</url>
+          <line>1</line>
+          <option name="timeStamp" value="50" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

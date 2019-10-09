@@ -8,11 +8,11 @@ from sklearn.model_selection import train_test_split
 
 IMAGES_PER_CLASS = 10000
 subsets = ['train', 'val', 'test']
-subsets_prop = [0.7, 0.15, 0.15]
+subsets_prop = [0.75, 0.2, 0.05]
 
-ds1_path = '/media/jcneves/DATASETS/VGG_FACE_2/byid_alignedlib_0.25_train/'
-ds2_path = '/media/jcneves/DATASETS/CASIA-WebFace/byid_alignedlib_0.25/'
-out_path = '/media/jcneves/DATASETS/real2real_standard_mixed/'
+ds1_path = '/media/jcneves/DATASETS/NVIDIA_FakeFace/byimg_alignedlib_0.3/'
+ds2_path = '/media/jcneves/DATASETS/VGG_FACE_2/byid_alignedlib_0.3_train/'
+out_path = '/media/jcneves/DATASETS/real2fake_standard/'
 
 ds1_files = [f for f in glob.glob(ds1_path + "*", recursive=True)]
 ds2_files = [f for f in glob.glob(ds2_path + "*", recursive=True)]
@@ -26,10 +26,6 @@ print(ids_to_use)
 #ds1_files = ds1_files[:ids_to_use]
 #ds2_files = ds2_files[:ids_to_use]
 
-aux = ds1_files + ds2_files
-random.shuffle(aux)
-ds1_files = aux[:int(0.5*len(aux))]
-ds2_files = aux[int(0.5*len(aux)):]
 
 # DIVIDE INTO SUBSETS BY IDENTITY
 
@@ -64,21 +60,18 @@ for s in subsets:
     idx = 0
     for i in range(len(ds1_files_subsets[s])):
 
-        id_path = ds1_files_subsets[s][i]
-        img_files = [f for f in glob.glob(id_path + "/*.jpg")]
+        img_file = ds1_files_subsets[s][i]
+        #img_files = [f for f in glob.glob(id_path + "/*.jpg")]
         #img_files = img_files[:imgs_per_id]
 
-        for f in img_files:
-
-            img_name = 'img_{:06d}.jpg'.format(idx)
-            shutil.copyfile(f, out_path + s + '/0/' + img_name)
-            idx = idx + 1
-
-            if idx >= n_img[s]:
-                break
+        img_name = 'img_{:06d}.jpg'.format(idx)
+        shutil.copyfile(img_file, out_path + s + '/0/' + img_name)
+        idx = idx + 1
 
         if idx >= n_img[s]:
             break
+
+
 
 
 

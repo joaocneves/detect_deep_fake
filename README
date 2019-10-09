@@ -1,0 +1,117 @@
+
+
+# h1 Deep Fake Detection - Detection of GAN generated faces 
+
+## h2 Datasets
+
+In this project the datasets can be organized in two ways:
+
+1) By ID:
+
+dataset_path
+	- id1
+		-img_0001.jpg
+		...
+		-img_1000.jpg
+	- id2
+		-img_0001.jpg
+		...
+		-img_1000.jpg
+	- idn
+		-img_0001.jpg
+		...
+		-img_1000.jpg
+
+2) By Image:
+
+dataset_path
+	-img_0001.jpg
+	...
+	-img_1000.jpg
+
+
+
+## h2 Pre-Processing
+
+### h3 align_face_byid.py 
+
+Aligns dataset images by identities
+
+- 1) Detect a face; 
+- 2) Facial landmark localization; 
+- 3) Rotates and scales the face to ensure that the eyes are located in a specific (x,y) position
+
+INPUT PARAMS
+
+DEBUG = 0
+
+shape_predictor_model = 'shape_predictor_68_face_landmarks.dat'
+dataset_path = '/media/jcneves/DATASETS/100K_FAKE/byid_original/'
+output_path = '/media/jcneves/DATASETS/100K_FAKE/byid_alignedlib_0.3/'
+eyes_margin = 0.3
+
+
+## h2 Dataset Creation
+
+### h3 create_real_to_fake_dataset.py 
+
+Creates a dataset with two classes: 0 - real face images, 1 - fake face images
+
+INPUT PARAMS
+
+IMAGES_PER_CLASS = 10000 # number of images in each class
+subsets = ['train', 'val', 'test'] # subsets which will be created
+subsets_prop = [0.75, 0.2, 0.05] # percentage of images used in each subset
+
+ds1_path = path to the fake dataset
+ds2_path = path to the real dataset
+out_path = path where the dataset will be created
+
+
+### h3 create_real_to_fake_dataset_mixed.py
+
+Creates a dataset with two classes: 0 - real face images, 1 - fake face images
+It requires four datasets, to ensure that the training data and test data belong to different datasets
+
+IMAGES_PER_CLASS = 10000
+subsets = ['train', 'val', 'test']
+subsets_prop = [0.05, 0.2, 0.75]
+
+ds1_path_train = '/media/jcneves/DATASETS/100K_FAKE/byimg_alignedlib_0.3/'
+ds1_path_test = '/media/jcneves/DATASETS/NVIDIA_FakeFace/byimg_alignedlib_0.3/'
+ds2_path_train = '/media/jcneves/DATASETS/CASIA-WebFace/byid_alignedlib_0.3/'
+ds2_path_test = '/media/jcneves/DATASETS/VGG_FACE_2/byid_alignedlib_0.3_train/'
+out_path = '/media/jcneves/DATASETS/real2fake_mixed/'
+
+## h2 Train CNN
+
+Code for training a CNN to idenitfy between N classes
+Dataset format:
+
+data/
+  - train/
+      - class_1 folder/
+          - img1.png
+          - img2.png
+      - class_2 folder/
+      .....
+      - class_n folder/
+  - val/
+      - class_1 folder/
+      - class_2 folder/
+      ......
+      - class_n folder/
+
+INPUT PARAMS
+
+data_dir = "/media/jcneves/DATASETS/real2fake_mixed/"
+input_shape = 200
+batch_size = 32
+mean = [0.5, 0.5, 0.5]
+std = [0.5, 0.5, 0.5]
+scale = 224
+use_parallel = False
+use_gpu = False
+epochs = 2
+
+

@@ -16,8 +16,9 @@ import os
 DEBUG = 0
 
 shape_predictor_model = 'shape_predictor_68_face_landmarks.dat'
-dataset_path = '/media/jcneves/DATASETS/CASIA-WebFace/byid_original/'
-output_path = '/media/jcneves/DATASETS/CASIA-WebFace/byid_alignedlib/'
+dataset_path = '/media/jcneves/DATASETS/100K_FAKE/byid_original/'
+output_path = '/media/jcneves/DATASETS/100K_FAKE/byid_alignedlib_0.3/'
+eyes_margin = 0.3
 
 # --------------------- INIT ------------------------- #
 
@@ -25,11 +26,12 @@ output_path = '/media/jcneves/DATASETS/CASIA-WebFace/byid_alignedlib/'
 # the facial landmark predictor and the face aligner
 detector = dlib.get_frontal_face_detector()
 predictor = dlib.shape_predictor(shape_predictor_model)
-fa = FaceAligner(predictor, desiredFaceWidth=224, desiredLeftEye=(0.3, 0.3))
+fa = FaceAligner(predictor, desiredFaceWidth=224, desiredLeftEye=(eyes_margin, eyes_margin))
 
 os.makedirs(output_path, exist_ok=True)
 
 dataset_files = [f for f in glob.glob(dataset_path + "**/*.jpg", recursive=True)]
+dataset_files = dataset_files[30000:]
 print(len(dataset_files))
 last_path = ''
 last_image_path_out = ''
@@ -38,7 +40,7 @@ for idx, image_path in enumerate(dataset_files):
 
     # load the input image, resize it, and convert it to grayscale
     image = cv2.imread(image_path)
-    # image = imutils.resize(image, width=800)
+    image = imutils.resize(image, width=256)
     gray = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
 
     # show the original input image and detect faces in the grayscale image
