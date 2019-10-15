@@ -2,14 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ea0b9dbc-39bb-4051-ad48-5699f70879d1" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/align_face_byimg.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/create_real_to_fake_dataset.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/create_real_to_fake_dataset2.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/create_real_to_fake_dataset_mixed.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/calc_coocurr_byid.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/detect_deep_fake.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/detect_deep_fake.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/align_face.py" beforeDir="false" afterPath="$PROJECT_DIR$/align_face.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/code.py" beforeDir="false" afterPath="$PROJECT_DIR$/code" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/create_real_to_real_dataset_standard.py" beforeDir="false" afterPath="$PROJECT_DIR$/create_real_to_real_dataset_standard.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/align_face_byid.py" beforeDir="false" afterPath="$PROJECT_DIR$/align_face_byid.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -45,7 +42,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.create_real_to_fake_dataset_mixed">
+  <component name="RunManager" selected="Python.calc_coocurr_byid">
     <configuration name="align_face" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="detect_deep_fake" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -67,7 +64,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="align_face_byimg" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="calc_coocurr_byid" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="detect_deep_fake" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -79,7 +76,7 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/align_face_byimg.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/calc_coocurr_byid.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -153,11 +150,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.calc_coocurr_byid" />
         <item itemvalue="Python.create_real_to_fake_dataset_mixed" />
         <item itemvalue="Python.create_real_to_fake_dataset2" />
         <item itemvalue="Python.align_face" />
         <item itemvalue="Python.create_real_to_fake_dataset" />
-        <item itemvalue="Python.align_face_byimg" />
       </list>
     </recent_temporary>
   </component>
@@ -268,6 +265,11 @@
           <url>file://$PROJECT_DIR$/train.py</url>
           <line>1</line>
           <option name="timeStamp" value="50" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/calc_coocurr_byid.py</url>
+          <line>69</line>
+          <option name="timeStamp" value="56" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

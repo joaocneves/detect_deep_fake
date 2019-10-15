@@ -16,8 +16,8 @@ import os
 DEBUG = 0
 
 shape_predictor_model = 'shape_predictor_68_face_landmarks.dat'
-dataset_path = '/media/jcneves/DATASETS/100K_FAKE/byid_original/'
-output_path = '/media/jcneves/DATASETS/100K_FAKE/byid_alignedlib_0.3/'
+dataset_path = 'D:\\FACE_DATASETS\\CASIA-WebFace\\'
+output_path = 'D:\\FACE_DATASETS\\CASIA-WebFace\\byid_alignedlib_0.3\\'
 eyes_margin = 0.3
 
 # --------------------- INIT ------------------------- #
